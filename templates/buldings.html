@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Buildings</title>
+</head>
+<body>
+    <h1>All Buildings</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/students">Students</a></li>
+            <li><a href="/classes">Classes</a></li>
+            <li><a href="/professors">Professors</a></li>
+            <li><a href="/departments">Departments</a></li>
+            <li><a href="/buildings">Buildings</a></li>
+        </ul>
+    </nav>
+    <table border="1">
+        <tr>
+            <th>Building ID</th>
+            <th>Building Name</th>
+            <th>Number of Rooms</th>
+        </tr>
+        {% for building in buildings %}
+        <tr>
+            {% for field in building %}
+            <td>{{ field }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

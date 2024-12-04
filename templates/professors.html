@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Professors</title>
+</head>
+<body>
+    <h1>All Professors</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/students">Students</a></li>
+            <li><a href="/classes">Classes</a></li>
+            <li><a href="/professors">Professors</a></li>
+            <li><a href="/departments">Departments</a></li>
+            <li><a href="/buildings">Buildings</a></li>
+        </ul>
+    </nav>
+    <table border="1">
+        <tr>
+            <th>Professor ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+        {% for professor in professors %}
+        <tr>
+            {% for field in professor %}
+            <td>{{ field }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

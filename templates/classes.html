@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Classes</title>
+</head>
+<body>
+    <h1>All Classes</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/students">Students</a></li>
+            <li><a href="/classes">Classes</a></li>
+            <li><a href="/professors">Professors</a></li>
+            <li><a href="/departments">Departments</a></li>
+            <li><a href="/buildings">Buildings</a></li>
+        </ul>
+    </nav>
+    <table border="1">
+        <tr>
+            <th>Class ID</th>
+            <th>Class Name</th>
+            <th>Class Code</th>
+            <th>Units</th>
+            <th>Time</th>
+            <th>Day</th>
+            <th>Semester</th>
+            <th>Room</th>
+            <th>Building ID</th>
+            <th>Professor ID</th>
+        </tr>
+        {% for cls in classes %}
+        <tr>
+            {% for field in cls %}
+            <td>{{ field }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
